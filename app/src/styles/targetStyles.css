@@ -1,0 +1,46 @@
+@media screen and (min-width: 1600px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    }
+    .hero-message {
+        min-width: 9in,
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    }
+}
+@keyframes ctaHover {
+    to {
+        background-color: #FFBF00;
+        color: white;
+    }
+}
+@keyframes ctaReverse {
+    to {
+        background-color: transparent;
+        color: #FFBF00;
+        box-shadow: 0 0 0 2px #FFBF00 inset;
+    }
+}
+.create-account:hover,
+.send-message:hover {
+    animation: ctaHover 0.1s linear forwards;
+}
+.login-button:active:focus {
+    animation: ctaReverse 0.05s linear forwards;
+}
+#link-button {
+    border: none;
+    color: #1890FF;
+    box-shadow: none;
+}
+#link-button::after{
+    animation: none;
+}

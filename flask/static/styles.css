@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto+Mono:wght@700&display=swap');
+:root {
+    --primary-color: #313451;
+    --accent-color: white;
+
+    --desktop-hero-bg-width: calc(100vw - 17px);
+    --mobile-hero-bg-width: calc(100vw);
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid {
+    position: absolute;
+    z-index: 1;
+    height: 300vh;
+    width: calc(var(--desktop-hero-bg-width) - 10vw);
+    opacity: 20%;
+    background-color: red;
+    display: none;
+    grid-template: repeat(12, 1fr) / repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-areas: ". header header header header header header header header header header header header ."
+        ". content content content ."
+        "footer footer footer";
+}
+
+/* Header settings */
+.header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12.5%;
+    z-index: 1;
+}
+.header h2 {
+    font: 24px 'Roboto Mono', monospace;
+    color: white;
+    width: 30%;
+    text-align: center;
+}
+.nav-buttons, .accounts {
+    display: inherit;
+    font: 16px 'Oxygen', sans-serif;
+    color: white;
+}
+.nav-buttons {
+    width: 50%;
+}
+.nav-buttons, .nav-buttons div {
+    display: inherit;
+}
+.nav-buttons div {
+    width: 80%;
+    padding-left: 1.1in;
+}
+.nav-buttons div * {
+    padding: 0 24px;
+}
+.accounts {
+    display: inherit;
+    width: 20%;
+}
+.accounts * {
+    padding: 10px 30px;
+}
+.sign-up {
+    background-color: #F1A32F;
+    border-radius: 32px;
+}
+.header h2:hover {
+    cursor: context-menu;
+}
+.nav-buttons div p:hover, .accounts *:hover {
+    animation: fade 0.05s linear forwards;
+    cursor: pointer;
+}
+.sign-up:hover {
+    animation: none;
+}
+
+/* Main settings */
+.hero {
+    height: 100vh;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+@media screen and (min-width: 961px) {
+    .hero {
+        min-height: 5in;
+    }
+    .hero img {
+        object-fit: cover;
+        filter: blur(4px);
+        opacity: 50%;
+        height: 100vh;
+        min-height: 5in;
+        width: var(--desktop-hero-bg-width);
+    }
+    .footer {
+        height: 12vh;
+        min-height: 1in;
+        width: var(--desktop-hero-bg-width);
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-container {
+        width: 60vw;
+        height: 30vw;
+        min-height: 4in;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-container p, .img-box, .content-container h5 {
+        width: 25vw;
+        min-width: 2in;
+        height: 40vh;
+        min-height: 2in;
+    }
+    .content-container p, .content-container h5 {
+        font: 16px 'Roboto', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 32px;
+        line-height: 24px;
+    }
+    .img-box, .image {
+        min-width: 3.3in;
+        width: 25vw;
+        height: 40vh;
+        min-height: 3in;
+    }
+    .footer {
+        background-color: var(--primary-color);
+        display: flex;
+        width: var(--desktop-hero-bg-width);
+    }
+    .legal {
+        width: 50%;
+        min-width: 7in;
+        display: inherit;
+    }
+    .footer-banner {
+        width: 25%;
+        justify-content: space-around;
+    }
+    .img-box {
+        background-color: #424242;
+        border-radius: 5px;
+        box-shadow: -4px 4px 8px 0 #424242;
+    }
+    .reverse-hover {
+        box-shadow: 4px 4px 8px 0 #424242;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 960px) {
+    .nav-buttons, .accounts {
+        display: none;
+    }
+    .hero {
+        height: 100vh;
+        min-height: 5in;
+        width: var(--mobile-hero-bg-width);
+    }
+    .hero img {
+        object-fit: fill;
+        filter: blur(8px);
+        opacity: 50%;
+        height: 100vh;
+        min-height: 5in;
+        width: var(--mobile-hero-bg-width);
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .content-container {
+        width: 60vw;
+        min-width: 5in;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    .img-box, .image {
+        width: 30vw;
+        min-width: 2.5in;
+        min-height: 2.5in;
+        margin: 0;
+    }
+    .content-container p, .content-container h5 {
+        font: 16px 'Roboto', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 24px;
+        width: 2.5in;
+        word-spacing: 1px;
+    }
+    .footer {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column-reverse;
+        height: 10vh;
+        min-height: 1in;
+        width: 100%;
+        margin-top: 10%;
+    }
+    .legal {
+        display: none;
+    }
+    .footer-banner {
+        justify-content: center;
+    }
+    .footer-banner div {
+        padding: 0 12px;
+    }
+    .img-box {
+        background-color: #424242;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 0 #424242;
+    }
+}
+#chad {
+    font: 24px 'Oxygen', sans-serif;
+}
+.image {
+    object-fit: cover;
+    opacity: 80%;
+    border-radius: 5px;
+}
+.img-box:hover {
+    transform: scale(1.05);
+}
+.links * {
+    margin: 24px 12px;
+    transform: scale(2);
+    color: white;
+}
+@keyframes fade {
+    from {color: white;}
+    to {color: #FF9700;}
+}
+.legal, .links, .footer-banner {
+    height: 100%;
+    font: 16px 'Roboto', sans-serif;
+    color: white;
+}
+.footer-banner {
+    background-color: #25273d;
+    box-shadow: 0 8px 8px 0 #222;
+    min-width: 3in;
+    display: inherit;
+    line-height: 10px;
+    align-items: center;
+}
+.footer-banner p {
+    font-size: 0.9em;
+}
+.legal div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.legal div *:hover {
+    animation: fade 0.05s linear forwards;
+}
+.links {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+}
+.links *:hover {
+    animation: fade 0.05s linear forwards;
+}
