@@ -4,7 +4,6 @@ import App from './App';
 import './styles/index.css';
 import 'antd/dist/antd.css';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

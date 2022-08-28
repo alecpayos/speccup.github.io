@@ -7,18 +7,18 @@ import Login from "./pages/Login";
 import Promos from "./pages/Promos";
 
 const App = () => {
-    return (
-        <Router>
-            <Header />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/register' element={<Registration />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/promo-deals' element={<Promos />} />
-            </Routes>
-            <Footer />
-        </Router>
-    );
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Registration />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/promo-deals' element={<Promos />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
  
 export default App;

@@ -1,4 +1,4 @@
-import { Button, Col, Input, Modal } from "antd";
+import { Button, Input, Modal } from "antd";
 import { useEffect, useState } from "react";
 import { colors, styles } from "./globals";
 
