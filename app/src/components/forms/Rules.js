@@ -20,6 +20,18 @@ const rules = {
     [{ required: true,message: 'CVC is required' }]
   ],
 
+  contact: {
+    messageField: [{ required: true, message: 'Please send us any feedback' }],
+    userFields: (ruleContent) => {
+      return [{ required: true, message: `Your ${ ruleContent } is requried` }]
+    }
+  },
+
+  loginInformation: [
+    [{ required: true, message: 'Please input your username' }],
+    [{ required: true, message: 'Please input your password' }] 
+  ],
+
   confirmPassword: (password) => {
     const confirmValidator = (fieldValue) => ({
       validator(_, value) {

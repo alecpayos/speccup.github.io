@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import logo from '../assets/logo.png'
 import ForgotPassword from "../components/ForgotPassword"
+import rules from "../components/forms/Rules"
 import { colors } from "../components/globals"
 import '../styles/targetStyles.css'
 
@@ -22,17 +23,17 @@ const Login = () => {
       }}
     >
       <Col 
-          xs={{ span: 16 }}
-          sm={{ span: 12 }}
-          md={{ span: 10 }}
-          lg={{ span: 8 }}
-          xl={{ span: 6 }}
-          xxl={{ span: 4 }}
-          style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-          }}
+        xs={{ span: 16 }}
+        sm={{ span: 12 }}
+        md={{ span: 10 }}
+        lg={{ span: 8 }}
+        xl={{ span: 6 }}
+        xxl={{ span: 4 }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
         <Form 
           form={form} 
@@ -45,18 +46,18 @@ const Login = () => {
         >
             
           <Col style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={logo} style={{ height: '64px', width: '64px', margin: '24px 0 8px 0'}}/>
+            <img alt="speccupLogo" src={logo} style={{ height: '64px', width: '64px', margin: '24px 0 8px 0'}}/>
             <p style={{ font: "bold 24px 'Roboto Mono', monospace", color: '#277DCD', marginBottom: '32px'}}>SpeccUp</p>
           </Col>
 
           <Col span={24} style={{ width: '100%' }}>
-            <Form.Item name='username' rules={[{ required: true, message: 'Please input your username' }]}>
+            <Form.Item name='username' rules={ rules.loginInformation[0] }>
               <Input placeholder="Username" size="large" style={{fontSize: '18px'}} />
             </Form.Item>  
           </Col>
 
           <Col span={24} style={{ width: '100%' }}>
-            <Form.Item name='password' rules={[{ required: true, message: 'Please input your password'}] }>
+            <Form.Item name='password' rules={ rules.loginInformation[1] }>
               <Input.Password placeholder="Password" size="large" style={{fontSize: '18px'}}/>
             </Form.Item>
           </Col>
@@ -72,14 +73,14 @@ const Login = () => {
               <button
                 className='login-button'
                 style={{
-                    padding: '12px 0',
-                    width: '100%',
-                    backgroundColor: colors.textColor.secondary,
-                    color: colors.textColor.support,
-                    borderRadius: '5px',
-                    font: "bold 18px 'Roboto Mono', monospace",
-                    border: 'none',
-                    marginTop: '8px'
+                  padding: '12px 0',
+                  width: '100%',
+                  backgroundColor: colors.textColor.secondary,
+                  color: colors.textColor.support,
+                  borderRadius: '5px',
+                  font: "bold 18px 'Roboto Mono', monospace",
+                  border: 'none',
+                  marginTop: '8px'
                 }}
               >
                 Login

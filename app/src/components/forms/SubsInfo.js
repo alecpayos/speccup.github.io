@@ -18,10 +18,10 @@ import {
 const { Option } = Select
 const { Title } = Typography
 
-const SubscriptionInformation = ({ onChange, render, memory }) => {
+const SubscriptionInformation = ({ onChange, render, memory, xxl, style }) => {
   useEffect(() => {
       setSubscriptionInfo(memory)
-  }, [])
+  }, [memory])
 
   const countryOptions = useMemo(() => countryList().getData(), [])
   const [ form ] = Form.useForm()
@@ -107,6 +107,8 @@ const SubscriptionInformation = ({ onChange, render, memory }) => {
                   return options.isoCode
                 case "City":
                   return options.name
+                default:
+                  return null
               }
             },
             label() {
@@ -117,6 +119,8 @@ const SubscriptionInformation = ({ onChange, render, memory }) => {
                   return options.name
                 case "City":
                   return options.name
+                default:
+                  return null
               }
             }
           }
@@ -138,7 +142,8 @@ const SubscriptionInformation = ({ onChange, render, memory }) => {
       md={{ span: 16, offset: 4 }}
       lg={{ span: 12, offset: 6 }}
       xl={{ span: 8, offset: 8 }}
-      xxl={{ span: 6, offset: 9 }}
+      xxl={xxl}
+      style={style}
     >
       <Form 
         form={form} 

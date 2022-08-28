@@ -1,10 +1,59 @@
-import { Col, Row } from "antd"
+import { Col } from "antd"
 import Contact from "../components/Contact"
 import promoBackground from '../assets/feature-images/promos background.jpg'
-import Registration from "./Registration"
-
+import BasicInformation from "../components/forms/BasicInfo"
+import AccountInformation from "../components/forms/AccountInfo"
+import SubscriptionInformation from "../components/forms/SubsInfo"
+import { useState } from "react"
 
 const Promos = () => {
+  const [ formSelector, setFormSelector ] = useState(0)
+  const [ userBasicInfo, setUserBasicInfo ] = useState({})
+  const [ userAccountInfo, setUserAccountInfo ] = useState({})
+  const [ userSubscriptionInfo, setUserSubscriptionInfo ] = useState({})
+
+  const formRenderer = id => setFormSelector(id)
+  const handleBasicData = basicInfo => setUserBasicInfo(basicInfo)
+  const handleAccountData = accountInfo => setUserAccountInfo(accountInfo)
+  const handleSubscriptionData = subscriptionInfo => setUserSubscriptionInfo(subscriptionInfo)
+
+  const Forms = () => {
+    switch(formSelector) {
+      case 0:
+        return (
+          <BasicInformation 
+            onChange={handleBasicData} 
+            render={formRenderer} 
+            memory={userBasicInfo} 
+            xxl={{ span: 14, offset: 5 }}
+            style={{ backgroundColor: 'white', padding: '8px 48px', borderRadius: '16px' }}
+          />
+        )
+      case 1:
+        return (
+          <AccountInformation 
+            onChange={handleAccountData} 
+            render={formRenderer} 
+            memory={userAccountInfo}
+            xxl={{ span: 14, offset: 5 }}
+            style={{ backgroundColor: 'white', padding: '8px 48px', borderRadius: '16px' }}
+          />        
+        )
+      case 2:
+        return (
+          <SubscriptionInformation 
+            onChange={handleSubscriptionData} 
+            render={formRenderer} 
+            memory={userSubscriptionInfo}
+            xxl={{ span: 14, offset: 5 }}
+            style={{ backgroundColor: 'white', padding: '8px 48px', borderRadius: '16px' }}
+          />
+        )
+      default:
+        return null
+    }
+  }
+
   return(
     <>
       <Col style={{ display: 'flex', height: '100vh', marginBottom: '48px' }}>
@@ -42,7 +91,7 @@ const Promos = () => {
         </Col>
 
         <Col span={10} style={{ justifyContent: 'center', alignSelf: 'center' }}>
-          <Registration options='none' />
+          <Forms />
         </Col>
 
       </Col>

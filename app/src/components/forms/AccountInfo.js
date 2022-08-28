@@ -13,10 +13,10 @@ import {
 
 const { Title } = Typography
 
-const AccountInformation = ({ onChange, render, memory }) => { 
+const AccountInformation = ({ onChange, render, memory, xxl, style }) => { 
   useEffect(() => {
     setAccountInformation(memory)
-  }, [])
+  }, [memory])
 
   const [ form ] = Form.useForm()
   const [ accountInformation, setAccountInformation ] = useState({
@@ -38,7 +38,8 @@ const AccountInformation = ({ onChange, render, memory }) => {
       md={{ span: 12, offset: 6 }}
       lg={{ span: 10, offset: 7 }}
       xl={{ span: 8, offset: 8 }}
-      xxl={{ span: 6, offset: 9 }}
+      xxl={xxl}
+      style={style}
     >
       <Form 
         form={form} 

@@ -3,6 +3,8 @@ import { Col, Row, Steps, } from 'antd'
 import BasicInformation from '../components/forms/BasicInfo'
 import AccountInformation from '../components/forms/AccountInfo'
 import SubscriptionInformation from '../components/forms/SubsInfo'
+import Offers from '../components/Offers'
+import Contact from '../components/Contact'
 
 import { 
   RightCircleOutlined, 
@@ -30,6 +32,8 @@ const Registration = ({ options }) => {
         return '6.5in'
       case 2:
         return '7.5in'
+      default:
+        return null
     }
   }
 
@@ -41,6 +45,7 @@ const Registration = ({ options }) => {
             onChange={handleBasicData} 
             render={formRenderer} 
             memory={userBasicInfo} 
+            xxl={{ span: 6, offset: 9 }}
           />
         )
       case 1:
@@ -48,7 +53,8 @@ const Registration = ({ options }) => {
           <AccountInformation 
             onChange={handleAccountData} 
             render={formRenderer} 
-            memory={userAccountInfo} 
+            memory={userAccountInfo}
+            xxl={{ span: 6, offset: 9 }}
           />        
         )
       case 2:
@@ -56,7 +62,8 @@ const Registration = ({ options }) => {
           <SubscriptionInformation 
             onChange={handleSubscriptionData} 
             render={formRenderer} 
-            memory={userSubscriptionInfo} 
+            memory={userSubscriptionInfo}
+            xxl={{ span: 6, offset: 9 }}
           />
         )
       default:
@@ -92,14 +99,14 @@ const Registration = ({ options }) => {
   }
 
   return (
-    <div style={{ height: 'calc(100vh - 2.31in)', minHeight: componentHeight() }}>
+    <div style={{ paddingTop: '64px', minHeight: componentHeight() }}>
       <Row
         style={{ 
           height: '1.7in', 
           alignContent: 'center', 
           paddingTop: '1in',
           display: options
-          }}
+        }}
       >
         <Col 
           xs={{ span: 0 }}
@@ -110,14 +117,12 @@ const Registration = ({ options }) => {
         </Col>    
       </Row> 
 
-      <Row
-        style={{ 
-          height: 'calc(100vh - 3in)', 
-          minHeight: '6in',
-        }}
-      >
+      <Row style={{ minHeight: '584px' }}>
         <Forms />
       </Row>
+
+      <Offers />
+      <Contact />
     </div>
   )
 }

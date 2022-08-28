@@ -17,10 +17,10 @@ import {
 const { Option } = Select
 const { Title } = Typography
 
-const BasicInformation = ({ onChange, render, memory }) => {
+const BasicInformation = ({ onChange, render, memory, xxl, style }) => {
   useEffect(() => {
     setBasicInformation(memory)
-  }, [])
+  }, [memory])
 
   const [ form ] = Form.useForm()
   const [ basicInformation, setBasicInformation ] = useState({
@@ -40,7 +40,7 @@ const BasicInformation = ({ onChange, render, memory }) => {
   const handleSubmit = () => { onChange(basicInformation); render(1) }
 
   const GenderField = () => {
-    const [ genderValue, setGenderValue ] = useState(null)
+    const [ , setGenderValue ] = useState(null)
     const handleGenderValue = (genderValue) => {
       setGenderValue(genderValue)
       setBasicInformation({ ...basicInformation, gender: genderValue })
@@ -86,7 +86,8 @@ const BasicInformation = ({ onChange, render, memory }) => {
       md={{ span: 16, offset: 4 }}
       lg={{ span: 12, offset: 6 }}
       xl={{ span: 8, offset: 8 }}
-      xxl={{ span: 6, offset: 9 }}
+      xxl={xxl}
+      style={style}
     >
       <Form 
         form={form} 
