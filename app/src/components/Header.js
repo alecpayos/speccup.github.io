@@ -141,7 +141,7 @@ const Header = () => {
           xl={buttonGrid.xl(textValue)}
           xxl={buttonGrid.xxl(textValue)}
         >
-          <Link to={'/' + (button.targetURL(textValue))}>
+          <Link to={'/speccup.github.io/' + (button.targetURL(textValue))}>
             <div>
               <Title 
                 level={5}
@@ -185,7 +185,7 @@ const Header = () => {
           lg={{ span: 1 }}
           xl={{ span: 1, offset: 3 }}
         >
-          <Link to='/'><img alt='speccup logo' width={48} src={appLogo} /></Link>
+          <Link to='/speccup.github.io/'><img alt='speccup logo' width={48} src={appLogo} /></Link>
         </Col>
 
         <FeatureButtons />

@@ -32,7 +32,7 @@ const Hero = () => {
       </Col>
 
       <Col style={{ marginTop: '32px' }}>
-        <Link to='/register'>
+        <Link to='/speccup.github.io/register'>
           <Button 
             className='create-account'
             style={{

@@ -90,7 +90,7 @@ const Login = () => {
 
           <Col style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '8px' }}>
             <Button id="link-button" onClick={handleModalVisibility}>Forgot password?</Button>
-            <Link to='/register'>Don't have an account yet?</Link>
+            <Link to='/speccup.github.io/register'>Don't have an account yet?</Link>
           </Col>
 
         </Form>
