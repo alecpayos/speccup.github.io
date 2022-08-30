@@ -11,10 +11,10 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Registration />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/promo-deals' element={<Promos />} />
+        <Route path='/speccup.github.io/' element={<Home />} />
+        <Route path='/speccup.github.io/register' element={<Registration />} />
+        <Route path='/speccup.github.io/login' element={<Login />} />
+        <Route path='/speccup.github.io/promo-deals' element={<Promos />} />
       </Routes>
       <Footer />
     </Router>
