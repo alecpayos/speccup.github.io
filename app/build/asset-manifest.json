@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/speccup.github.io/static/css/main.1a7d85a1.css",
-    "main.js": "/speccup.github.io/static/js/main.9ad3a7d0.js",
+    "main.js": "/speccup.github.io/static/js/main.8d3cf587.js",
     "static/media/speed.png": "/speccup.github.io/static/media/speed.0c8f9240e629ab8ff3b3.png",
     "static/media/squat.png": "/speccup.github.io/static/media/squat.c37b0ec2f8acef74f1a0.png",
     "static/media/flex.png": "/speccup.github.io/static/media/flex.b4377f4126f177c8d0b7.png",
@@ -10,10 +10,10 @@
     "index.html": "/speccup.github.io/index.html",
     "static/media/Alt Logo.svg": "/speccup.github.io/static/media/Alt Logo.a9f67db1ad069032ca30fe398b2bc79f.svg",
     "main.1a7d85a1.css.map": "/speccup.github.io/static/css/main.1a7d85a1.css.map",
-    "main.9ad3a7d0.js.map": "/speccup.github.io/static/js/main.9ad3a7d0.js.map"
+    "main.8d3cf587.js.map": "/speccup.github.io/static/js/main.8d3cf587.js.map"
   },
   "entrypoints": [
     "static/css/main.1a7d85a1.css",
-    "static/js/main.9ad3a7d0.js"
+    "static/js/main.8d3cf587.js"
   ]
 }
