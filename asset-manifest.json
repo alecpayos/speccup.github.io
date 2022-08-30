@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a7d85a1.css",
-    "main.js": "/static/js/main.92e4492a.js",
-    "static/media/speed.png": "/static/media/speed.0c8f9240e629ab8ff3b3.png",
-    "static/media/squat.png": "/static/media/squat.c37b0ec2f8acef74f1a0.png",
-    "static/media/flex.png": "/static/media/flex.b4377f4126f177c8d0b7.png",
-    "static/media/promos background.jpg": "/static/media/promos background.c9050ade885e09a5e48b.jpg",
-    "static/media/logo.png": "/static/media/logo.9c21bdeaa8c98c3dcf3a.png",
-    "static/media/Alt Logo.svg": "/static/media/Alt Logo.a9f67db1ad069032ca30fe398b2bc79f.svg",
-    "index.html": "/index.html",
-    "main.1a7d85a1.css.map": "/static/css/main.1a7d85a1.css.map",
-    "main.92e4492a.js.map": "/static/js/main.92e4492a.js.map"
+    "main.css": "/speccup.github.io/static/css/main.1a7d85a1.css",
+    "main.js": "/speccup.github.io/static/js/main.aeaf70f9.js",
+    "static/media/speed.png": "/speccup.github.io/static/media/speed.0c8f9240e629ab8ff3b3.png",
+    "static/media/squat.png": "/speccup.github.io/static/media/squat.c37b0ec2f8acef74f1a0.png",
+    "static/media/flex.png": "/speccup.github.io/static/media/flex.b4377f4126f177c8d0b7.png",
+    "static/media/promos background.jpg": "/speccup.github.io/static/media/promos background.c9050ade885e09a5e48b.jpg",
+    "static/media/logo.png": "/speccup.github.io/static/media/logo.9c21bdeaa8c98c3dcf3a.png",
+    "index.html": "/speccup.github.io/index.html",
+    "static/media/Alt Logo.svg": "/speccup.github.io/static/media/Alt Logo.a9f67db1ad069032ca30fe398b2bc79f.svg",
+    "main.1a7d85a1.css.map": "/speccup.github.io/static/css/main.1a7d85a1.css.map",
+    "main.aeaf70f9.js.map": "/speccup.github.io/static/js/main.aeaf70f9.js.map"
   },
   "entrypoints": [
     "static/css/main.1a7d85a1.css",
-    "static/js/main.92e4492a.js"
+    "static/js/main.aeaf70f9.js"
   ]
 }
